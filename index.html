@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Generador de QR - DIVISION PLANIFICACION</title>
+    <title>DIVISION PLANIFICACION</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <header>
         <h1>DIVISION PLANIFICACION</h1>
         <img src="logo.png" alt="Logo" class="logo">
     </header>
     <main>
+        <div class="mensaje-bienvenida">
+            <h2>Bienvenido al proyecto de pagina para crear Codigos QR version de prueba.</h2>
+
+        </div>
         <div class="container">
-            <p>Bienvenido al proyecto de pagina para crear Codigos QR version de prueba.</p>
+
             <h2>Instrucciones para el uso de esta pagina</h2>
             <ol>
                 <li>Colocar la direccion url deseada a convertir.</li>
-                <li>Una vez generado el codigo, realizá una captura de pantalla o utilizá alguna aplicación para recortar la imagen y su url.</li>
-                <li>Luego con esa imagen obtenida adjuntala a la Orden de Servicio como todos los archivos de siempre, con la salvedad que hay que guardarla como imagen y tildar que sea visible.</li>
+                <li>Una vez generado el codigo, realizá una captura de pantalla o utilizá alguna aplicación para
+                    recortar la imagen y su url.</li>
+                <li>Luego con esa imagen obtenida adjuntala a la Orden de Servicio como todos los archivos de siempre,
+                    con la salvedad que hay que guardarla como imagen y tildar que sea visible.</li>
             </ol>
             <input type="text" id="url" placeholder="Ingresa la URL">
             <button onclick="generateQRCode()">Generar QR</button>
             <div id="instructions-container">
-                <p id="instructions">El siguiente Codigo QR brinda acceso al mapa interactivo del despliegue de la presente Orden de Servicio, para ello se deberá escanear mediante camara correspondiente a dispositivo movil para visualizar su contenido.</p>
+                <p id="instructions">El siguiente Codigo QR brinda acceso al mapa interactivo del despliegue de la
+                    presente Orden de Servicio, para ello se deberá escanear mediante camara correspondiente a
+                    dispositivo movil para visualizar su contenido.</p>
             </div>
             <div id="qrcode-container">
                 <div id="qrcode"></div>
@@ -37,4 +47,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
