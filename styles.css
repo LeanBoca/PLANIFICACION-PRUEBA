@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif; /* Utilizar fuente Arial en toda la página */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #ffffff; /* Fondo blanco */
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007BFF;
+    color: white;
+}
+
+header .logo {
+    width: 100px;
+    margin-top: 10px;
+    border: 5px solid transparent; /* Borde transparente */
+    border-radius: 10px; /* Redondear bordes si es necesario */
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.container p {
+    font-size: 16px;
+    text-align: center;
+    margin: 10px; /* Reducir el margen entre párrafos */
+}
+
+.container h2 {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.container ol {
+    text-align: left;
+    margin: 0 auto 20px auto;
+    padding: 0 20px;
+}
+
+input {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px; /* Aumentar espacio inferior del botón */
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#instructions-container {
+    display: none; /* Ocultar el contenedor de las instrucciones inicialmente */
+    text-align: center; /* Centrar la URL debajo del QR */
+    max-width: 80%; /* Reducir el ancho máximo del cuadro de la URL */
+    padding: 10px 0; /* Añadir padding vertical */
+    margin: 0 auto; /* Centrar el cuadro */
+}
+
+#qrcode-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#qrcode {
+    margin-bottom: 20px;
+}
+
+#url-display {
+    text-align: center; /* Centrar la URL debajo del QR */
+    max-width: 80%; /* Reducir el ancho máximo del cuadro de la URL */
+    padding: 10px 0; /* Añadir padding vertical */
+    margin: 0 auto; /* Centrar el cuadro */
+}
+
+#instructions {
+    font-size: 18px; /* Aumentar tamaño del texto de las instrucciones */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center;
+    margin: 20px auto; /* Aumentar margen superior e inferior del texto de instrucciones */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    margin-top: auto;
+}
+
+#top-container, #bottom-container {
+    max-width: 10%; /* Reducir el ancho máximo del contenedor */
+    text-align: center;
+    margin: 0 auto; /* Centrar horizontalmente */
+}
