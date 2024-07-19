@@ -35,5 +35,5 @@ function generateQRCode() {
         const instructionsContainer = document.getElementById('instructions-container');
         instructionsContainer.style.display = 'block';
     };
-    logo.src = 'logo.png'; // Asegúrate de tener tu logo en la misma carpeta o especificar la ruta correcta
+    logo.src = 'logo1.png'; // Asegúrate de tener tu logo en la misma carpeta o especificar la ruta correcta
 }
