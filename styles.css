@@ -1,13 +1,13 @@
+/* styles.css */
+
 body {
     font-family: Arial, sans-serif;
-    /* Utilizar fuente Arial en toda la página */
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     background-color: #ffffff;
-    /* Fondo blanco */
 }
 
 header {
@@ -21,29 +21,20 @@ h1 {
     font-size: 60px;
     text-align: center;
     margin: 10px;
-
-} 
-
-
-
+}
 
 header .logo {
     width: 100px;
     margin-top: 10px;
     border: 5px solid transparent;
-    /* Borde transparente */
     border-radius: 20px;
-    /* Redondear bordes si es necesario */
 }
 
 .mensaje-bienvenida {
     font-size: 20px;
     text-align: center;
     margin: 10px;
-    /* Reducir el margen entre párrafos */
-
 }
-
 
 .container {
     flex: 1;
@@ -54,14 +45,11 @@ header .logo {
     margin-bottom: 20px;
 }
 
-
 .container p {
     font-size: 16px;
     text-align: center;
     margin: 10px;
-    /* Reducir el margen entre párrafos */
 }
-
 
 .container h2 {
     font-size: 20px;
@@ -89,7 +77,6 @@ button {
     border-radius: 5px;
     cursor: pointer;
     margin-bottom: 100px;
-    /* Aumentar espacio inferior del botón */
 }
 
 button:hover {
@@ -98,15 +85,10 @@ button:hover {
 
 #instructions-container {
     display: none;
-    /* Ocultar el contenedor de las instrucciones inicialmente */
     text-align: center;
-    /* Centrar la URL debajo del QR */
     max-width: 80%;
-    /* Reducir el ancho máximo del cuadro de la URL */
     padding: 10px 0;
-    /* Añadir padding vertical */
     margin: 0 auto;
-    /* Centrar el cuadro */
 }
 
 #qrcode-container {
@@ -121,23 +103,16 @@ button:hover {
 
 #url-display {
     text-align: center;
-    /* Centrar la URL debajo del QR */
     max-width: 80%;
-    /* Reducir el ancho máximo del cuadro de la URL */
     padding: 20px 0;
-    /* Añadir padding vertical */
     margin: 0 auto;
-    /* Centrar el cuadro */
 }
 
 #instructions {
     font-size: 18px;
-    /* Aumentar tamaño del texto de las instrucciones */
     font-weight: bold;
-    /* Texto en negrita */
     text-align: center;
     margin: 20px auto;
-    /* Aumentar margen superior e inferior del texto de instrucciones */
 }
 
 footer {
@@ -148,11 +123,33 @@ footer {
     margin-top: auto;
 }
 
-#top-container,
-#bottom-container {
-    max-width: 10%;
-    /* Reducir el ancho máximo del contenedor */
-    text-align: center;
-    margin: 0 auto;
-    /* Centrar horizontalmente */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-container input {
+    width: 200px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.login-container button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+}
+
+.main-container {
+    display: none;
 }

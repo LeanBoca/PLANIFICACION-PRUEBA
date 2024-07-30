@@ -1,3 +1,19 @@
+// script.js
+
+// Función de inicio de sesión
+function login() {
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+
+    if (username === 'PLANIFICACION' && password === 'plani2024') {
+        document.getElementById('login-container').style.display = 'none';
+        document.getElementById('main-container').style.display = 'block';
+    } else {
+        alert('Usuario o contraseña incorrectos');
+    }
+}
+
+// Función para generar el código QR
 function generateQRCode() {
     const url = document.getElementById('url').value;
     if (!url) {
@@ -64,10 +80,12 @@ document.getElementById('downloadPdf').addEventListener('click', function () {
     const qrImageY = margin + textHeight + 10;
     doc.addImage(qrDataUrl, 'PNG', qrImageX, qrImageY, qrImageWidth, qrImageHeight);
 
-    // Añadir la URL centrada
+    // Añadir la URL centrada y ajustada al ancho de la página
     doc.setFontSize(12);
+    const splitUrl = doc.splitTextToSize(url, maxWidth);
     const urlY = qrImageY + qrImageHeight + 20;
-    doc.text(url, pageWidth / 2, urlY, { align: "center" });
+    doc.text(splitUrl, pageWidth / 2, urlY, { align: "center" });
 
     doc.save('QR_Code_Document.pdf');
 });
+
