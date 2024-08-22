@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -16,7 +18,7 @@ header {
 }
 
 h1 {
-    font-size: 4rem; /* Ajuste general para encabezados */
+    font-size: 60px;
     text-align: center;
     margin: 10px;
 }
@@ -29,7 +31,7 @@ header .logo {
 }
 
 .mensaje-bienvenida {
-    font-size: 1.25rem; /* Ajuste general para texto */
+    font-size: 20px;
     text-align: center;
     margin: 10px;
 }
@@ -44,13 +46,13 @@ header .logo {
 }
 
 .container p {
-    font-size: 1rem;
+    font-size: 16px;
     text-align: center;
     margin: 10px;
 }
 
 .container h2 {
-    font-size: 1.25rem;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -74,7 +76,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 20px; /* Ajuste para reducir espacio en dispositivos móviles */
+    margin-bottom: 100px;
 }
 
 button:hover {
@@ -107,7 +109,7 @@ button:hover {
 }
 
 #instructions {
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     margin: 20px auto;
@@ -121,6 +123,7 @@ footer {
     margin-top: auto;
 }
 
+/***contenedor de login***/
 .login-container {
     display: flex;
     flex-direction: column;
@@ -128,14 +131,18 @@ footer {
     justify-content: center;
     height: 100vh;
     background-image: url(imagen.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 .login-container input {
-    width: 80%; /* Ajuste para pantallas pequeñas */
-    max-width: 300px; /* Tamaño máximo en pantallas grandes */
+    width: 200px;
     padding: 10px;
     margin-bottom: 10px;
 }
+
+/***boton de formulario de ingreso***/
 
 .login-container button {
     padding: 10px 20px;
@@ -154,6 +161,8 @@ footer {
     display: none;
 }
 
+
+/**wsp**/
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -162,73 +171,15 @@ footer {
     right: 20px;
     background-color: #25d366;
     color: #FFF;
-    border-radius: 50%;
+    border-radius: 50px;
     text-align: center;
     font-size: 30px;
     box-shadow: 2px 2px 3px #999;
     z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 .whatsapp-icon {
     width: 100%;
     height: 100%;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 3rem; /* Ajuste para pantallas más pequeñas */
-    }
-
-    .container h2 {
-        font-size: 1rem;
-    }
-
-    .container p {
-        font-size: 0.875rem;
-    }
-
-    button {
-        padding: 8px 16px;
-    }
-
-    .login-container input {
-        width: 90%;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 2.5rem; /* Ajuste para dispositivos móviles más pequeños */
-    }
-
-    .container h2 {
-        font-size: 0.875rem;
-    }
-
-    .container p {
-        font-size: 0.75rem;
-    }
-
-    button {
-        padding: 6px 12px;
-    }
-
-    .login-container input {
-        width: 100%;
-    }
-
-    .whatsapp-float {
-        width: 50px;
-        height: 50px;
-        bottom: 15px;
-        right: 15px;
-    }
-
-    .whatsapp-icon {
-        font-size: 24px;
-    }
+    padding: 10px;
 }
