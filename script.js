@@ -56,7 +56,7 @@ document.getElementById('downloadPdf').addEventListener('click', function () {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
-    const instructions = "El siguiente Codigo QR brinda acceso al mapa interactivo del despliegue de la presente Orden de Servicio, para ello se deberá escanear mediante camara correspondiente a dispositivo movil para visualizar su contenido.";
+    const instructions = "El siguiente Codigo QR brinda acceso a los archivos adjuntos de la presente Orden de Servicio, para ello se deberá escanear mediante camara correspondiente a dispositivo movil para visualizar su contenido.";
     const qrCanvas = document.getElementById('qrcode').querySelector('img');
     const url = document.getElementById('url-display').innerText;
 
