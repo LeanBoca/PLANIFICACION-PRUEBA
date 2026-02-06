@@ -4,16 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DIVISION PLANIFICACION</title>
+    <title>DIVISION PLANIFICACIÓN DE SERVICIOS GENERALES</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div id="login-container" class="login-container">
-        <h2>Iniciar sesión</h2>
-        <input type="text" id="username" placeholder="Usuario">
-        <input type="password" id="password" placeholder="Contraseña">
-        <button onclick="login()">Iniciar sesión</button>
+        <div class="login-box">
+            <h2>Iniciar sesión</h2>
+            <input type="text" id="username" placeholder="Usuario">
+            <input type="password" id="password" placeholder="Contraseña">
+            <button onclick="login()">Iniciar sesión</button>
+        </div>
     </div>
     
     <div id="main-container" class="main-container" style="display:none;">
@@ -23,16 +25,17 @@
         </header>
         <main>
             <div class="mensaje-bienvenida">
-                <h2>Bienvenido al proyecto de pagina para crear Codigos QR version 1.4</h2>
-                <h2>(Fecha de actualización: 06/12/24)</h2>
+                <h2>Bienvenidos!!! Esta página es de uso exclusivo para personal de la dependencia</h2>
+                <h2>Modulo de Creación de Mapas en Codigos QR - Version 1.5</h2>
+                <h2>(Fecha de actualización: 30/01/25)</h2>
             </div>
             <div class="container">
                 <h3>Instrucciones para su correcto uso</h3>
                 <ol>
                     <li>Colocar la direccion url deseada a convertir y apretar una o dos veces (dependiendo del navegador)</li>
                     <li>Una vez generado el codigo, tenemos dos opciones: </li>
-                    <article>a. Descargar el PDF.</a>
-                    <article>b. Realizar una captura de pantalla o utilizar alguna aplicación para recortar la imagen y su url.</a>
+                    <article>a. Descargar el PDF.</article>
+                    <article>b. Realizar una captura de pantalla o utilizar alguna aplicación para recortar la imagen y su url.</article>
                     <li>Colocarle un nombre al archivo generado acorde a la Orden de Servicio, para que al finalizar la orden quede prolijo la sección de Adjuntos.</li>
                     <li>Luego con ese archivo .PDF, adjuntarlo a la Orden de Servicio como todos los archivos de siempre, con la salvedad que hay que guardarlo y tildar que sea visible.</li>
                     <article>Cualquier incoveniente en la pagina favor de avisar utilizando el boton de la App WhatsApp.</article>
@@ -49,8 +52,6 @@
                 </div>
             </div>
         </main>
-
-        
     </div>
 
     <footer>
@@ -58,14 +59,11 @@
     </footer>
 
     <a href="https://wa.me/541169505734" class="whatsapp-float" target="_blank">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"
-            class="whatsapp-icon">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
     </a>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
-
 </html>
-

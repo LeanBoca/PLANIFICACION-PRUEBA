@@ -51,8 +51,7 @@ header .logo {
     margin: 10px;
 }
 
-.container h2 {
-    font-size: 20px;
+.container h2, .container h3 {
     text-align: center;
     margin-bottom: 10px;
 }
@@ -69,50 +68,77 @@ input {
     margin-bottom: 10px;
 }
 
-button {
-    padding: 10px 20px;
+/*** SECCIÓN LOGIN (Corregida para no tapar el escudo) ***/
+.login-container {
+    display: flex;
+    flex-direction: column;
+    /* Empuja el contenido hacia la derecha */
+    align-items: flex-end; 
+    justify-content: center;
+    height: 100vh;
+    background-image: url(imagen.jpeg);
+    background-repeat: no-repeat;
+    background-size: contain; 
+    background-position: center;
+    background-color: #010816; /* Color oscuro para completar el ancho */
+}
+
+.login-box {
+    background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro transparente */
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(0, 123, 255, 0.4);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    backdrop-filter: blur(8px); /* Efecto cristal */
+    
+    /* Espacio desde la derecha para despejar el ala del águila */
+    margin-right: 14%; 
+}
+
+.login-box h2 {
+    color: #ffffff;
+    font-size: 26px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.8);
+}
+
+.login-box input {
+    width: 230px;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+/* Botón con efecto resplandor azul */
+.login-container button {
+    padding: 12px 25px;
     background-color: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 100px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#instructions-container {
-    display: none;
-    text-align: center;
-    max-width: 80%;
-    padding: 10px 0;
-    margin: 0 auto;
-}
-
-#qrcode-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#qrcode {
-    margin-bottom: 20px;
-}
-
-#url-display {
-    text-align: center;
-    max-width: 80%;
-    padding: 20px 0;
-    margin: 0 auto;
-}
-
-#instructions {
-    font-size: 18px;
     font-weight: bold;
-    text-align: center;
-    margin: 20px auto;
+    width: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+.login-container button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.9);
+    transform: scale(1.03);
+}
+
+/*** OTROS ELEMENTOS ***/
+.main-container {
+    display: none;
 }
 
 footer {
@@ -123,63 +149,43 @@ footer {
     margin-top: auto;
 }
 
-/***contenedor de login***/
-.login-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-image: url(imagen.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-}
-
-.login-container input {
-    width: 200px;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-
-/***boton de formulario de ingreso***/
-
-.login-container button {
-    padding: 10px 20px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.login-container button:hover {
-    background-color: #0056b3;
-}
-
-.main-container {
-    display: none;
-}
-
-
-/**wsp**/
+/* Botón flotante de WhatsApp */
 .whatsapp-float {
     position: fixed;
     width: 60px;
     height: 60px;
-    bottom: 20px;
-    right: 20px;
+    bottom: 30px;
+    right: 30px;
     background-color: #25d366;
     color: #FFF;
-    border-radius: 50px;
-    text-align: center;
-    font-size: 30px;
-    box-shadow: 2px 2px 3px #999;
-    z-index: 100;
+    border-radius: 50%; /* Círculo perfecto */
+    display: flex; /* Para centrar el icono */
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    background-color: #128c7e;
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
 }
 
 .whatsapp-icon {
-    width: 100%;
-    height: 100%;
-    padding: 10px;
+    width: 35px; /* Tamaño controlado del icono */
+    height: 35px;
+}
+
+/* Animación de pulsación sutil */
+@keyframes pulse-whatsapp {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+}
+
+.whatsapp-float {
+    animation: pulse-whatsapp 2s infinite;
 }
