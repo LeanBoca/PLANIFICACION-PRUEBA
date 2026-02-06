@@ -13,7 +13,7 @@ body {
 header {
     text-align: center;
     padding: 10px;
-    background-color: #1d1ba3d3;
+    background-color: #1c1fc5d3;
     color: white;
 }
 
@@ -36,55 +36,70 @@ header .logo {
     margin: 10px;
 }
 
+/*** CONTENEDOR PRINCIPAL POST-LOGIN ***/
 .container {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Centra todo el contenido del generador */
     justify-content: center;
-    margin-bottom: 20px;
+    margin: 0 auto 20px auto;
+    width: 90%;
+    max-width: 900px;
 }
 
-.container p {
-    font-size: 16px;
+.container p, .container h2, .container h3 {
     text-align: center;
     margin: 10px;
-}
-
-.container h2, .container h3 {
-    text-align: center;
-    margin-bottom: 10px;
 }
 
 .container ol {
     text-align: left;
     margin: 0 auto 20px auto;
     padding: 0 20px;
+    max-width: 700px;
 }
 
+/* Inputs generales */
 input {
     width: 80%;
     padding: 10px;
     margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-/*** SECCIÓN LOGIN (Corregida para no tapar el escudo) ***/
+/* Botones generales */
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/*** SECCIÓN LOGIN (Corregida para despejar el escudo) ***/
 .login-container {
     display: flex;
     flex-direction: column;
-    /* Empuja el contenido hacia la derecha */
-    align-items: flex-end; 
+    align-items: flex-end; /* Mueve el login a la derecha */
     justify-content: center;
     height: 100vh;
     background-image: url(imagen.jpeg);
     background-repeat: no-repeat;
     background-size: contain; 
     background-position: center;
-    background-color: #010816; /* Color oscuro para completar el ancho */
+    background-color: #010816;
 }
 
 .login-box {
-    background-color: rgba(0, 0, 0, 0.75); /* Fondo oscuro transparente */
+    background-color: rgba(0, 0, 0, 0.75);
     padding: 40px;
     border-radius: 15px;
     border: 1px solid rgba(0, 123, 255, 0.4);
@@ -92,10 +107,8 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
-    backdrop-filter: blur(8px); /* Efecto cristal */
-    
-    /* Espacio desde la derecha para despejar el ala del águila */
-    margin-right: 14%; 
+    backdrop-filter: blur(8px);
+    margin-right: 8%; /* Espacio para no tapar el ala del águila */
 }
 
 .login-box h2 {
@@ -113,43 +126,56 @@ input {
     border-radius: 5px;
     border: 1px solid #444;
     background-color: #fff;
-    font-size: 14px;
 }
 
-/* Botón con efecto resplandor azul */
-.login-container button {
-    padding: 12px 25px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+.login-box button {
     width: 100%;
-    transition: all 0.3s ease;
+    padding: 12px;
+    background-color: #007BFF;
+    font-weight: bold;
     box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+    transition: all 0.3s ease;
 }
 
-.login-container button:hover {
-    background-color: #0056b3;
+.login-box button:hover {
     box-shadow: 0 0 20px rgba(0, 123, 255, 0.9);
     transform: scale(1.03);
 }
 
-/*** OTROS ELEMENTOS ***/
-.main-container {
-    display: none;
+/*** CENTRADO DEL CÓDIGO QR ***/
+#qrcode-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    /* Centra el QR y la URL horizontalmente */
+    justify-content: center;
+    width: 100%;
+    margin: 30px auto;
 }
 
+#qrcode {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: white; /* Fondo blanco para el QR */
+    border-radius: 10px;
+}
+
+#qrcode canvas {
+    max-width: 100%;
+    height: auto !important;
+}
+
+/*** FOOTER ***/
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1d1ba3d3;
+    background-color: #1c1fc5d3;
     color: white;
     margin-top: auto;
 }
 
-/* Botón flotante de WhatsApp */
+/*** BOTÓN DE WHATSAPP OPTIMIZADO ***/
 .whatsapp-float {
     position: fixed;
     width: 60px;
@@ -157,35 +183,32 @@ footer {
     bottom: 30px;
     right: 30px;
     background-color: #25d366;
-    color: #FFF;
-    border-radius: 50%; /* Círculo perfecto */
-    display: flex; /* Para centrar el icono */
+    border-radius: 50%;
+    display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
     z-index: 1000;
     transition: all 0.3s ease;
-    text-decoration: none;
+    animation: pulse-whatsapp 2s infinite;
 }
 
 .whatsapp-float:hover {
     background-color: #128c7e;
     transform: scale(1.1);
-    box-shadow: 0px 6px 15px rgba(0,0,0,0.4);
 }
 
 .whatsapp-icon {
-    width: 35px; /* Tamaño controlado del icono */
+    width: 35px;
     height: 35px;
 }
 
-/* Animación de pulsación sutil */
 @keyframes pulse-whatsapp {
     0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
     70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
     100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
 }
 
-.whatsapp-float {
-    animation: pulse-whatsapp 2s infinite;
+.main-container {
+    display: none;
 }
